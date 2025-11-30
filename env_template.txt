@@ -1,0 +1,30 @@
+# Twitter API Credentials Template
+# Copy this file to .env and fill in your credentials
+#
+# IMPORTANT: For full functionality (likes, retweets, replies), you need OAuth 1.0a credentials
+# Bearer Token alone will NOT work for likes endpoint!
+
+# ============================================
+# Option 1: OAuth 1.0a (RECOMMENDED - Full Access)
+# ============================================
+# This is REQUIRED for likes endpoint and works best for your own tweets
+# Get these from: https://developer.twitter.com/en/portal/dashboard
+TWITTER_API_KEY=your_api_key_here
+TWITTER_API_SECRET=your_api_secret_here
+TWITTER_ACCESS_TOKEN=your_access_token_here
+TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret_here
+
+# ============================================
+# Option 2: Bearer Token (Limited Access)
+# ============================================
+# Bearer Token works for retweets and replies, but NOT for likes
+# Use this only if you don't have OAuth 1.0a credentials
+# TWITTER_BEARER_TOKEN=your_bearer_token_here
+
+# ============================================
+# Notes:
+# ============================================
+# - Only use ONE method (OAuth 1.0a OR Bearer Token, not both)
+# - OAuth 1.0a is recommended for full functionality
+# - Likes endpoint only works with OAuth 1.0a and for YOUR OWN tweets
+# - All 4 OAuth credentials must be from the SAME Twitter app/project
