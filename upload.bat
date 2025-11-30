@@ -42,6 +42,17 @@ git remote add origin https://github.com/Chikh124/twitterpost-scrapper.git
 echo.
 echo [5/5] Завантаження на GitHub...
 git branch -M main
+
+REM Try to pull first if remote has files
+echo Перевірка remote репозиторію...
+git pull origin main --allow-unrelated-histories --no-edit 2>nul
+if errorlevel 1 (
+    echo Remote має файли, об'єдную зміни...
+    git pull origin main --allow-unrelated-histories
+    git add .
+    git commit -m "Merge remote and local changes" 2>nul
+)
+
 git push -u origin main
 
 echo.

@@ -37,6 +37,28 @@ git commit -m "Add Twitter/X data extractor project"
 git push -u origin main
 ```
 
+### Якщо виникла помилка "non-fast-forward" (як у вас):
+
+Це означає, що на GitHub вже є файли. Потрібно об'єднати зміни:
+
+**Варіант 1: Об'єднати зміни (рекомендовано)**
+
+```bash
+git pull origin main --allow-unrelated-histories
+# Якщо виникне конфлікт, вирішіть його, потім:
+git add .
+git commit -m "Merge remote and local changes"
+git push -u origin main
+```
+
+**Варіант 2: Перезаписати remote (якщо на GitHub тільки .gitignore)**
+
+```bash
+git push -u origin main --force
+```
+
+⚠️ **Увага**: `--force` перезапише всі файли на GitHub! Використовуйте тільки якщо впевнені.
+
 ## Крок 3: Якщо виникнуть проблеми
 
 ### Помилка: "remote origin already exists"
