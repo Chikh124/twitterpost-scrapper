@@ -2,8 +2,7 @@
 
 Extract usernames and data from Twitter/X posts (likes, retweets, and replies) and export them to an XLSX file.
 
-**🚀 Recommended: Node.js version** - Better async handling, cleaner code, faster performance!
-**🐍 Python version also available** - See below for Python instructions.
+**🚀 Node.js implementation** - Modern async handling, clean code, fast performance!
 
 ## Features
 
@@ -41,24 +40,6 @@ TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret_here
 4. **Run:**
 ```bash
 npm start "https://x.com/username/status/TWEET_ID"
-```
-
-See `README_NODEJS.md` for full Node.js documentation.
-
----
-
-## Python Version (Alternative)
-
-1. **Install Python dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-2. **Create `.env` file** (same as above)
-
-3. **Run:**
-```bash
-python twitter_extractor.py "https://x.com/username/status/TWEET_ID"
 ```
 
 ## Output
@@ -102,14 +83,15 @@ For tweets older than 7 days, the script automatically uses web scraping:
 - Browser will open (Chrome/Chromium)
 - You may need to log in to Twitter/X manually
 - Replies will be scraped from the page
-- ⚠️ **Warning**: Web scraping may violate Twitter's Terms of Service. Use at your own risk.
 
-See `SCRAPING_WARNING.md` for more details.
+⚠️ **WARNING**: Web scraping may violate Twitter's Terms of Service. Use at your own risk.
+
+**Recommended Alternative**: Twitter Academic Research Tier provides legal access to full historical archive. See: https://developer.twitter.com/en/products/twitter-api/academic-research
 
 ## Example
 
 ```bash
-python twitter_extractor.py "https://x.com/James_Gets_It/status/1974616766442840240"
+npm start "https://x.com/James_Gets_It/status/1974616766442840240"
 ```
 
 This will create a file like: `twitter_data_1974616766442840240_20241127_143022.xlsx`
